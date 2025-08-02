@@ -1,0 +1,13 @@
+{
+  "name": "gerry-test-dummy",
+  "version": "1.0.0",
+  "description": "Deliberately vulnerable site for testing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  }
+}
