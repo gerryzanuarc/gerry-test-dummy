@@ -2,42 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gerry Test Dummy Site</title>
+  <title>Gerry CVE Dummy Web</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-    header, footer { background: #333; color: white; padding: 10px; text-align: center; }
-    nav a { margin: 0 10px; color: white; text-decoration: none; }
-    main { padding: 20px; }
-    form input, form textarea { display: block; margin-bottom: 10px; width: 100%; padding: 8px; }
+    body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+    .cve-list { background: white; padding: 20px; border-radius: 8px; }
+    .cve-item { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #ddd; }
+    .cve-id { font-weight: bold; color: #c00; }
   </style>
 </head>
 <body>
+  <h1>Welcome to Gerry’s CVE Dummy Target</h1>
+  <p>This page is made for CVE enumeration testing only. The following known vulnerable components are listed:</p>
 
-  <header>
-    <h1>Welcome to Gerry's Test Dummy Site</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Login</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <h2>Dummy Form for Testing</h2>
-    <form method="POST" action="#">
-      <input type="text" name="name" placeholder="Your Name">
-      <input type="email" name="email" placeholder="Email">
-      <textarea name="message" placeholder="Your message..."></textarea>
-      <input type="submit" value="Send">
-    </form>
-
-    <h3>Sample Content</h3>
-    <p>This is a test paragraph for tool analysis. Try scanning this page using your custom tools for vulnerabilities such as CORS, CSRF, SQLi, etc.</p>
-  </main>
+  <div class="cve-list">
+    <div class="cve-item">
+      <div class="cve-id">CVE-2023-12345</div>
+      <p>Remote Code Execution in Apache Struts 2.5.12</p>
+    </div>
+    <div class="cve-item">
+      <div class="cve-id">CVE-2022-67890</div>
+      <p>Buffer overflow vulnerability in OpenSSL 1.0.2</p>
+    </div>
+    <div class="cve-item">
+      <div class="cve-id">CVE-2021-44228</div>
+      <p>Log4Shell vulnerability in Apache Log4j 2.14.1</p>
+    </div>
+    <div class="cve-item">
+      <div class="cve-id">CVE-2017-5638</div>
+      <p>Apache Struts Jakarta Multipart parser RCE vulnerability</p>
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 Gerry Caesar
+    <p>Dummy CVE Data for Testing Purposes Only - 2025</p>
   </footer>
-
 </body>
 </html>
