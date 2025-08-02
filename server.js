@@ -85,7 +85,27 @@ app.get('/comment', (req, res) => {
     </html>
   `);
 });
+// Simulasi SQL Injection (vulnerable)
+app.get('/product', (req, res) => {
+  const id = req.query.id;
 
+  // Tanpa validasi/sanitasi input
+  const fakeDb = {
+    1: 'Laptop ASUS ROG',
+    2: 'iPhone 13 Pro',
+    3: 'Xiaomi Mi Band 6',
+  };
+
+  const product = fakeDb[id];
+
+  if (product) {
+    res.send(`Product ID ${id}: ${product}`);
+  } else {
+    res.send(`No product found for ID ${id}`);
+  }
+
+  console.log(`[SQLI Sim] Queried ID: ${id}`);
+});
 // Save comment (POST) - no sanitization
 app.post('/comment', (req, res) => {
   const { comment } = req.body;
